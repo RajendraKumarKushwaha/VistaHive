@@ -1,0 +1,16 @@
+.card {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+p {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+dt {
+    color: black;
+  
+}
+dd {
+    color: gray;
+    font-size: 1rem;
+}
