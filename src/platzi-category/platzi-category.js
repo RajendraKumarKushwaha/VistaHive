@@ -28,9 +28,9 @@ export function PlatziCategory() {
 
     }, [params.catname]);
     return (
-        <div className="container-fluid ">
+        <div className="container-fluid d-inline">
             <h2></h2>
-            <div className="d-flex flex-wrap">
+            <div className="d-flex flex-wrap justify-content-center" style={{paddingTop:"34px"}}>
                 {
                     categories.map(product =>
                         <div className="card p-2 m-2" key={product.id} style={{ width: '300px' }}>

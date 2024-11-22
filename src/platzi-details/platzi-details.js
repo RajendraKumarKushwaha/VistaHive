@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import Store from "../stores/Store";
+import './platzi-details.css';
 
 export function PlatziDetails() {
 
@@ -22,7 +23,7 @@ export function PlatziDetails() {
             <h2>Yours Cart Item</h2>
 
 
-            <div>
+            <div className="table-responsive">
 
 
                 <table className="table table-hover">
@@ -41,12 +42,12 @@ export function PlatziDetails() {
                         {
                             items.map(item =>
                                 <tr>
-                                    <td>{item.title}</td>
-                                    <td>{item.price}</td>
-                                    <td>{item.brand}</td>
-                                    <td>{item.category}</td>
-                                    <td><img src={item.thumbnail} width="50px" height="50px" alt="item" /></td>
-                                    <td>
+                                    <td data-label="Title">{item.title}</td>
+                                    <td data-label="Price">{item.price}</td>
+                                    <td data-label="Brand">{item.brand}</td>
+                                    <td data-label="Category">{item.category}</td>
+                                    <td data-label="Preview"><img src={item.thumbnail} width="50px" height="50px" alt="item" /></td>
+                                    <td data-label="Category">
                                     <Link to={`/category/` + item.category}>back to {item.category}</Link>
                                     </td>
                                 </tr>

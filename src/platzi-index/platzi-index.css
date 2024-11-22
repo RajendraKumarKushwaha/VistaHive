@@ -1,0 +1,31 @@
+/* Dropdown Menu */
+.dropdown-links {
+    display: block; /* Keep display block to allow transition */
+    position: absolute;
+    top: 19%;
+    left: 0;
+    width: 100%;
+    background-color: #17a2b8;
+    z-index: 1000;
+    overflow: hidden; /* Hide content when collapsing */
+    max-height: 0; /* Collapsed state */
+    transition: max-height 1s ease-out; /* Smooth transition */
+}
+
+/* Open State */
+.dropdown-links.open {
+    max-height: 500px; /* Expanded state (adjust this value based on content) */
+}
+
+/* Links in Dropdown */
+.dropdown-links a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-links a:hover {
+    background-color: #138496;
+}

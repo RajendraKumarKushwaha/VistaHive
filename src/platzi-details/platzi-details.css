@@ -1,0 +1,23 @@
+@media (max-width: 576px) {
+    .table thead {
+        display: none;
+    }
+    .table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+    }
+    .table tbody td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        position: relative;
+    }
+    .table tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        text-align: left;
+        font-weight: bold;
+    }
+}
